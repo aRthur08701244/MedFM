@@ -1,0 +1,212 @@
+.
+├── README.md
+├── configs
+│   ├── clip-b_vpt
+│   │   ├── 1-shot_chest.py
+│   │   ├── 1-shot_colon.py
+│   │   ├── 1-shot_endo.py
+│   │   ├── 10-shot_chest.py
+│   │   ├── 10-shot_colon.py
+│   │   ├── 10-shot_endo.py
+│   │   ├── 5-shot_chest.py
+│   │   ├── 5-shot_colon.py
+│   │   └── 5-shot_endo.py
+│   ├── custom_imports.py
+│   ├── datasets
+│   │   ├── chest.py
+│   │   ├── colon.py
+│   │   └── endoscopy.py
+│   ├── dinov2-b_vpt
+│   │   ├── 1-shot_chest.py
+│   │   ├── 1-shot_colon.py
+│   │   ├── 1-shot_endo.py
+│   │   ├── 10-shot_chest.py
+│   │   ├── 10-shot_colon.py
+│   │   ├── 10-shot_endo.py
+│   │   ├── 5-shot_chest.py
+│   │   ├── 5-shot_colon.py
+│   │   └── 5-shot_endo.py
+│   ├── eva-b_vpt
+│   │   ├── 1-shot_chest.py
+│   │   ├── 1-shot_colon.py
+│   │   ├── 1-shot_endo.py
+│   │   ├── 10-shot_chest.py
+│   │   ├── 10-shot_colon.py
+│   │   ├── 10-shot_endo.py
+│   │   ├── 5-shot_chest.py
+│   │   ├── 5-shot_colon.py
+│   │   └── 5-shot_endo.py
+│   ├── swin-b_vpt
+│   │   ├── 1-shot_chest.py
+│   │   ├── 1-shot_colon.py
+│   │   ├── 1-shot_endo.py
+│   │   ├── 10-shot_chest.py
+│   │   ├── 10-shot_colon.py
+│   │   ├── 10-shot_endo.py
+│   │   ├── 5-shot_chest.py
+│   │   ├── 5-shot_colon.py
+│   │   └── 5-shot_endo.py
+│   ├── swin_schedule.py
+│   ├── transfer
+│   │   ├── dense_chest.py
+│   │   ├── dense_colon.py
+│   │   ├── dense_endo.py
+│   │   ├── effe_b5_chest.py
+│   │   ├── effe_b5_colon.py
+│   │   ├── effe_b5_endo.py
+│   │   ├── swin_chest.py
+│   │   ├── swin_colon.py
+│   │   └── swin_endo.py
+│   └── vit-b_vpt
+│       ├── 1-shot_chest.py
+│       ├── 1-shot_colon.py
+│       ├── 1-shot_endo.py
+│       ├── 10-shot_chest.py
+│       ├── 10-shot_colon.py
+│       ├── 10-shot_endo.py
+│       ├── 5-shot_chest.py
+│       ├── 5-shot_colon.py
+│       └── 5-shot_endo.py
+├── data_anns
+│   ├── MedFMC
+│   │   ├── chest
+│   │   │   ├── chest_1-shot_train_exp1.txt
+│   │   │   ├── chest_1-shot_train_exp2.txt
+│   │   │   ├── chest_1-shot_train_exp3.txt
+│   │   │   ├── chest_1-shot_train_exp4.txt
+│   │   │   ├── chest_1-shot_train_exp5.txt
+│   │   │   ├── chest_1-shot_val_exp1.txt
+│   │   │   ├── chest_1-shot_val_exp2.txt
+│   │   │   ├── chest_1-shot_val_exp3.txt
+│   │   │   ├── chest_1-shot_val_exp4.txt
+│   │   │   ├── chest_1-shot_val_exp5.txt
+│   │   │   ├── chest_10-shot_train_exp1.txt
+│   │   │   ├── chest_10-shot_train_exp2.txt
+│   │   │   ├── chest_10-shot_train_exp3.txt
+│   │   │   ├── chest_10-shot_train_exp4.txt
+│   │   │   ├── chest_10-shot_train_exp5.txt
+│   │   │   ├── chest_10-shot_val_exp1.txt
+│   │   │   ├── chest_10-shot_val_exp2.txt
+│   │   │   ├── chest_10-shot_val_exp3.txt
+│   │   │   ├── chest_10-shot_val_exp4.txt
+│   │   │   ├── chest_10-shot_val_exp5.txt
+│   │   │   ├── chest_5-shot_train_exp1.txt
+│   │   │   ├── chest_5-shot_train_exp2.txt
+│   │   │   ├── chest_5-shot_train_exp3.txt
+│   │   │   ├── chest_5-shot_train_exp4.txt
+│   │   │   ├── chest_5-shot_train_exp5.txt
+│   │   │   ├── chest_5-shot_val_exp1.txt
+│   │   │   ├── chest_5-shot_val_exp2.txt
+│   │   │   ├── chest_5-shot_val_exp3.txt
+│   │   │   ├── chest_5-shot_val_exp4.txt
+│   │   │   ├── chest_5-shot_val_exp5.txt
+│   │   │   ├── test_WithLabel.txt
+│   │   │   ├── test_WithoutLabel.txt
+│   │   │   ├── train_20.txt
+│   │   │   ├── trainval.txt
+│   │   │   └── val_20.txt
+│   │   ├── colon
+│   │   │   ├── colon_1-shot_train_exp1.txt
+│   │   │   ├── colon_1-shot_train_exp2.txt
+│   │   │   ├── colon_1-shot_train_exp3.txt
+│   │   │   ├── colon_1-shot_train_exp4.txt
+│   │   │   ├── colon_1-shot_train_exp5.txt
+│   │   │   ├── colon_1-shot_val_exp1.txt
+│   │   │   ├── colon_1-shot_val_exp2.txt
+│   │   │   ├── colon_1-shot_val_exp3.txt
+│   │   │   ├── colon_1-shot_val_exp4.txt
+│   │   │   ├── colon_1-shot_val_exp5.txt
+│   │   │   ├── colon_10-shot_train_exp1.txt
+│   │   │   ├── colon_10-shot_train_exp2.txt
+│   │   │   ├── colon_10-shot_train_exp3.txt
+│   │   │   ├── colon_10-shot_train_exp4.txt
+│   │   │   ├── colon_10-shot_train_exp5.txt
+│   │   │   ├── colon_10-shot_val_exp1.txt
+│   │   │   ├── colon_10-shot_val_exp2.txt
+│   │   │   ├── colon_10-shot_val_exp3.txt
+│   │   │   ├── colon_10-shot_val_exp4.txt
+│   │   │   ├── colon_10-shot_val_exp5.txt
+│   │   │   ├── colon_5-shot_train_exp1.txt
+│   │   │   ├── colon_5-shot_train_exp2.txt
+│   │   │   ├── colon_5-shot_train_exp3.txt
+│   │   │   ├── colon_5-shot_train_exp4.txt
+│   │   │   ├── colon_5-shot_train_exp5.txt
+│   │   │   ├── colon_5-shot_val_exp1.txt
+│   │   │   ├── colon_5-shot_val_exp2.txt
+│   │   │   ├── colon_5-shot_val_exp3.txt
+│   │   │   ├── colon_5-shot_val_exp4.txt
+│   │   │   ├── colon_5-shot_val_exp5.txt
+│   │   │   ├── test_WithLabel.txt
+│   │   │   ├── test_WithoutLabel.txt
+│   │   │   ├── train_20.txt
+│   │   │   ├── trainval.txt
+│   │   │   └── val_20.txt
+│   │   └── endo
+│   │       ├── endo_1-shot_train_exp1.txt
+│   │       ├── endo_1-shot_train_exp2.txt
+│   │       ├── endo_1-shot_train_exp3.txt
+│   │       ├── endo_1-shot_train_exp4.txt
+│   │       ├── endo_1-shot_train_exp5.txt
+│   │       ├── endo_1-shot_val_exp1.txt
+│   │       ├── endo_1-shot_val_exp2.txt
+│   │       ├── endo_1-shot_val_exp3.txt
+│   │       ├── endo_1-shot_val_exp4.txt
+│   │       ├── endo_1-shot_val_exp5.txt
+│   │       ├── endo_10-shot_train_exp1.txt
+│   │       ├── endo_10-shot_train_exp2.txt
+│   │       ├── endo_10-shot_train_exp3.txt
+│   │       ├── endo_10-shot_train_exp4.txt
+│   │       ├── endo_10-shot_train_exp5.txt
+│   │       ├── endo_10-shot_val_exp1.txt
+│   │       ├── endo_10-shot_val_exp2.txt
+│   │       ├── endo_10-shot_val_exp3.txt
+│   │       ├── endo_10-shot_val_exp4.txt
+│   │       ├── endo_10-shot_val_exp5.txt
+│   │       ├── endo_5-shot_train_exp1.txt
+│   │       ├── endo_5-shot_train_exp2.txt
+│   │       ├── endo_5-shot_train_exp3.txt
+│   │       ├── endo_5-shot_train_exp4.txt
+│   │       ├── endo_5-shot_train_exp5.txt
+│   │       ├── endo_5-shot_val_exp1.txt
+│   │       ├── endo_5-shot_val_exp2.txt
+│   │       ├── endo_5-shot_val_exp3.txt
+│   │       ├── endo_5-shot_val_exp4.txt
+│   │       ├── endo_5-shot_val_exp5.txt
+│   │       ├── test_WithLabel.txt
+│   │       ├── test_WithoutLabel.txt
+│   │       ├── train_20.txt
+│   │       ├── trainval.txt
+│   │       └── val_20.txt
+│   └── result
+│       ├── chest_1-shot.txt
+│       ├── chest_10-shot.txt
+│       ├── chest_5-shot.txt
+│       ├── colon_1-shot.txt
+│       ├── colon_10-shot.txt
+│       ├── colon_5-shot.txt
+│       ├── endo_1-shot.txt
+│       ├── endo_10-shot.txt
+│       └── endo_5-shot.txt
+├── docker
+│   └── Dockerfile
+├── medfmc
+│   ├── datasets
+│   │   └── medical_datasets.py
+│   ├── evaluation
+│   │   └── metrics
+│   │       └── auc.py
+│   └── models
+│       ├── __init__.py
+│       ├── prompt_eva.py
+│       ├── prompt_swin.py
+│       └── prompt_vit.py
+├── run.sh
+├── setup.cfg
+├── tools
+│   ├── generate_few-shot_file.py
+│   ├── infer.py
+│   ├── test.py
+│   └── train.py
+└── tree_new-model.txt
+
+22 directories, 188 files
